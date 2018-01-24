@@ -75,7 +75,7 @@ def main():
     age = input("Age: ")
     zipCode = input("What's your zip-code? ")
 
-    likes = input("Tell me about yourself and interests:")
+    likes = input("Tell me about yourself and interests: ")
     print()
 
     print("Welcome {}!".format(name))
@@ -97,7 +97,12 @@ def main():
     cmd = ""
     while cmd != "QUIT":
         cmd = input("> ").upper()
-        if "SALARY" in cmd:
+        if "HELP" in cmd:
+            print("Here's a list of commands:")
+            print("\tFIND or SEARCH to look for new suggestions")
+            print("\tBROWSE to show current suggestions")
+            print("\tSALARY to adjust salary")
+        elif "SALARY" in cmd:
             budget = 1000
         elif "BROWSE" in cmd or "SHOW" in cmd:
             print("Recommendations")
